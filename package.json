@@ -18,7 +18,8 @@
     "keccak": "^3.0.1",
     "parcel": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "process": "latest"
   },
   "devDependencies": {
     "cssnano": "^6.0.0",
