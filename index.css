@@ -1,0 +1,70 @@
+/* From uiverse.io by @Ali-Tahmazi99 */
+button {
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #DE3163;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+}
+
+button::before,
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+button::before {
+    left: -10px;
+    background: #DE3163;
+}
+
+button::after {
+    color: #ffffff;
+    right: -10px;
+    background: #DE3163;
+}
+
+button[disabled]{
+    background: #DE3163;
+}
+
+button:hover::before,
+button:hover::after {
+    width: 60%;
+}
+
+button:hover span {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+button:disabled span {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+button span {
+    color: #DE3163;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+}
+
+#root {
+    text-align: center;
+}
+
+.log {
+    background: beige;
+    border-radius: 3px;
+}
