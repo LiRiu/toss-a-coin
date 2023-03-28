@@ -24,5 +24,9 @@
     "cssnano": "^6.0.0",
     "postcss": "^8.2.15",
     "typescript": "^5.0.2"
+  },
+  "browser": {
+    "crypto": false,
+    "browser": false
   }
 }
