@@ -12,12 +12,18 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@ckb-lumos/codec": "latest",
     "@ckb-lumos/lumos": "0.20.0-alpha.1",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "keccak": "^3.0.1",
+    "parcel": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "parcel": "latest"
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "cssnano": "^6.0.0",
+    "postcss": "^8.2.15",
+    "typescript": "^5.0.2"
   }
 }
