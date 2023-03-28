@@ -27,6 +27,7 @@
   },
   "browser": {
     "crypto": false,
-    "browser": false
+    "browser": false,
+    "path": false
   }
 }
