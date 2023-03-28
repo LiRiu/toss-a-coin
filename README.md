@@ -16,6 +16,7 @@ yarn start
 
 ## Links
 
+- [Lumos](https://github.com/ckb-js/lumos) - CKB SDK in JS
 - [MetaMask](https://metamask.io/) - A crpto wallet
 - [Nervos Faucet](https://faucet.nervos.org/) - Claim Nervos testnet CKB
 - [PW lock](https://docs.nervos.org/docs/essays/pw-lock) - PW lock intro
