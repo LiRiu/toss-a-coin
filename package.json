@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@ckb-lumos/base": "latest",
     "@ckb-lumos/codec": "latest",
     "@ckb-lumos/lumos": "0.20.0-alpha.1",
     "@types/react": "^18.0.25",
