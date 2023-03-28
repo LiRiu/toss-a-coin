@@ -3,7 +3,7 @@
 ## Quick Start
 Replace `<address>` in url with your CKB address on testnet
 ```
-https://vercel.app/<address>
+https://toss-a-coin.vercel.app/?<address>
 ```
 paste link into anywhere embed html
 

@@ -12,7 +12,7 @@ export function App() {
   const [ethAddr, setEthAddr] = useState("");
   const [pwAddr, setPwAddr] = useState("");
 
-  const [transferAddr] = useState(window.location.pathname.split("?")[1]);
+  const [transferAddr] = useState(window.location.search.split("?")[1]);
   const [transferAmount] = useState(10000000000);
 
   const [isSendingTx, setIsSendingTx] = useState(false);
