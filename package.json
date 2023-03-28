@@ -3,7 +3,6 @@
   "name": "toss-a-coin",
   "version": "0.1.0",
   "description": "",
-  "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "lint": "tsc --noEmit"
