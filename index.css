@@ -9,6 +9,7 @@ button {
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 1;
+    font-family: 'ark-pixel-12px-monospaced-latin';
 }
 
 button::before,
@@ -67,4 +68,9 @@ button span {
 .log {
     background: beige;
     border-radius: 3px;
+}
+
+@font-face {
+    font-family: 'ark-pixel-12px-monospaced-latin';
+    src: url('ark-pixel-12px-monospaced-latin.woff2');
 }
