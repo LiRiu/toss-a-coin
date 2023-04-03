@@ -1,6 +1,7 @@
 /* From uiverse.io by @Ali-Tahmazi99 */
 button {
     display: inline-block;
+    cursor: pointer;
     width: 110px;
     height: 30px;
     border-radius: 10px;
