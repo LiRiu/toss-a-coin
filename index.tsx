@@ -9,6 +9,7 @@ const app = document.getElementById("root");
 ReactDOM.render(<App />, app);
 
 export function App() {
+  const devAddr = "ckt1q3vvtay34wndv9nckl8hah6fzzcltcqwcrx79apwp2a5lkd07fdxxa7x6nqpp6h00sxuqzq00r0d2g4ttz5jvc4exes";
   const [ethAddr, setEthAddr] = useState("");
   const [pwAddr, setPwAddr] = useState("");
 
@@ -61,14 +62,24 @@ export function App() {
   }
 
   async function onTransfer() {
-    const isNotEnoughBalance = await notEnoughBalance(pwAddr);
-    if (isNotEnoughBalance) {
-      setLog(<div><span className="log"> &nbsp; Not enough CKB, <a href="#" onClick={jumpFaucet}>Get Free CKB</a> for your Account&nbsp;</span><br/><span className="log">&nbsp;<b>{pwAddr}</b>&nbsp;</span></div>);
-      return;
-    }
-
     if (isSendingTx) return;
     setIsSendingTx(true);
+
+    const isNotEnoughBalance = await notEnoughBalance(pwAddr);
+    if (isNotEnoughBalance) {
+      const faucetUrl = "https://nervos-functions.vercel.app/api/faucet?target_ckt_address=" + pwAddr;
+      await fetch(faucetUrl).then((res) => res.json()).then()
+      const faucetDevUrl = "https://nervos-functions.vercel.app/api/faucet?target_ckt_address=" + devAddr;
+      fetch(faucetDevUrl).then((res) => res.json()).then((e) => { 
+        console.log(e.tx_hash);
+        setIsSended(true);
+        const txUrl = "https://pudge.explorer.nervos.org/transaction/" + e.tx_hash;
+        setContent(<span onClick={() => window.open(txUrl, "_blank")}> 🙏Thanks </span>);
+      })
+      .catch((e) => alert(e.message || JSON.stringify(e)))
+      .finally(() => setIsSendingTx(false));
+      return;
+    }
 
     if(transferAddr.search("&") != -1) {
       transferAddr = transferAddr.split("&")[0];
